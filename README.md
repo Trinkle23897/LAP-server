@@ -9,9 +9,9 @@ A simple LAP (Linux+Apache2+PHP) server without M (Mysql).
 
 ### Installation
 
-In Ubuntu 18.04:
+In Ubuntu:
 
-1. Install apache2 and php: `sudo apt install apache2 php7.2 libapache2-mod-php`
+1. Install apache2 and php: `sudo apt install apache2 libapache2-mod-php`
 
 2. clone this repo to some $dir
 
@@ -20,7 +20,7 @@ In Ubuntu 18.04:
    ```bash
    cd /etc/apache2
    vim apache2.conf
-   # change "/var/www/html" to $dir
+   # change "/var/www/html" to $dir, and remove "Indexes" to disable directly access to subdir
    vim sites-available/000-default.conf
    # change "/var/www/html" to $dir
    vim sites-available/default-ssl.conf
@@ -36,8 +36,6 @@ In Ubuntu 18.04:
    ```
 
 5. restart apache2 service: `service apache2 restart`
-
-In Ubuntu 16.04: replace php7.2 to php7.0
 
 ### Usage
 
