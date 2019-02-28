@@ -11,7 +11,7 @@ A simple LAP (Linux+Apache2+PHP) server without M (Mysql).
 
 In Ubuntu 18.04:
 
-1. Install apache2 and php: `sudo apt install apache2 php7.2`
+1. Install apache2 and php: `sudo apt install apache2 php7.2 libapache2-mod-php`
 
 2. clone this repo to some $dir
 
@@ -37,9 +37,11 @@ In Ubuntu 18.04:
 
 5. restart apache2 service: `service apache2 restart`
 
+In Ubuntu 16.04: replace php7.2 to php7.0
+
 ### Usage
 
-Just open your browser and look at `http://localhost`
+Open your browser and look at `http://localhost`
 
 ### Features
 
