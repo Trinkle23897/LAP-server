@@ -15,7 +15,7 @@
         echo "文件类型：" . $_FILES["file"]["type"] . "<br />";
         echo "文件大小：" . number_format($_FILES["file"]["size"] / 1024 / 1024, 2) . " M<br />";
         // echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br />";
-        if (file_exists("upload/" . $_FILES["file"]["name"]) || strpos(strtolower($_FILES["file"]["name"]), "php")) {
+        if (file_exists("upload/" . $_FILES["file"]["name"]) || strpos(strtolower($_FILES["file"]["name"]), "php") > -1) {
             echo $_FILES["file"]["name"] . " 已经存在，2秒后返回";
         } else {
             move_uploaded_file($_FILES["file"]["tmp_name"],

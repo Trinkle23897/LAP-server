@@ -1,7 +1,7 @@
 <?php
 header("Access-Control-Allow-Origin: *");
 $dir = $_GET["dir"];
-if($dir == '' || strpos($dir, "..")) $dir = './files';
+if($dir == '' || strpos($dir, "..") > -1) $dir = './files';
 if($dir[-1] != '/') $dir = $dir.'/';
 function get_all_files($dir) {
 	$arr = array();
