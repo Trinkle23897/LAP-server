@@ -35,7 +35,9 @@ In Ubuntu:
    # change max_execution_time, max_input_time, memory_limit, post_max_size, upload_max_filesize, and default_socket_timeout
    ```
 
-5. restart apache2 service: `service apache2 restart`
+5. change permission: `chmod 777 _ upload`
+
+6. restart apache2 service: `service apache2 restart`
 
 ### Usage
 
